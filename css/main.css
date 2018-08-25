@@ -85,7 +85,8 @@ body {
 	position: fixed;
 	width: 100%;
 	/* background-color: #35405f; */
-	background-color: rgba(144, 146, 153, 0.94);
+	/*background-color: rgba(144, 146, 153, 0.94);*/
+	background: rgba(0,0,0,0.5);
 	/* background-color: rgba(32, 178, 170, 0.86); */
 	padding: 0 30px;
 	z-index: 100;
@@ -191,7 +192,7 @@ body {
 }
 
 .pro-name {
-    font-size: 100px;
+    font-size: 60px;
     margin: 0;
     margin-bottom: 15px;  
     /* font-family: 'Lato', sans-serif; */
@@ -297,11 +298,18 @@ body {
   float: left;
   width: 25%;
   color: #262524;
+  padding: 0.2%;
 }
 
 .element-item > * {
   margin: 0;
   padding: 0;
+}
+.element-item .desc{
+	padding-top: 10px;
+	font-size: 14px;
+	text-align: left;
+	text-indent: 2em;
 }
 
 .btn-view {
@@ -359,7 +367,7 @@ body {
 	height: 100%;
 }
 .grid  figcaption{
-	padding: 2em;
+	padding: 1em;
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 1.25em;
@@ -414,6 +422,9 @@ body {
 	
     font-size: 55px;
 	word-spacing: 5px;
+}
+#services .block-heading p{
+	font-size: 24px;
 }
 
 
@@ -473,8 +484,8 @@ ul.numbersList span{
 }
 
 .testimonial p {
-    line-height: 34px;
-    margin-top: 20px;
+    line-height: 28px;
+    margin-top: 10px;
 }
 
 #testimonials .block-heading h1
@@ -736,7 +747,8 @@ i.fa.fa-envelope-o {
 
 @media (max-width: 767px) {
 	.element-item {
-		width: 50%;
+		/*width: 50%;*/
+		width: 100%;
 	}
 
 	#site-header .pull-right {
@@ -767,6 +779,10 @@ i.fa.fa-envelope-o {
     -o-background-size: cover;
     background-size: cover;
     }
+}
+
+.navbar-nav a span{
+
 }
 
 
