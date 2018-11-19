@@ -690,7 +690,7 @@ input[type="submit"]:hover {
 }
 
 .copyright {
-	text-align: left;
+	text-align: center;
 }
 
 .designed-by {
@@ -735,6 +735,9 @@ i.fa.fa-envelope-o {
 	line-height: 43px;
 	margin-top: -22px;
 }
+.text-content{
+	font-size: 24px;
+}
 /* ///////////////////////////////////////////////////////////////////// 
 //  11 - Responsive styles
 /////////////////////////////////////////////////////////////////////*/
@@ -767,6 +770,9 @@ i.fa.fa-envelope-o {
 }
 
 @media only screen and (max-width : 640px) {
+	.pro-name{
+		font-size: 48px;
+	}
     .parallax{
     background: url(../video/video.jpg) no-repeat center center fixed #444;
     background-attachment: fixed !important;
@@ -779,6 +785,11 @@ i.fa.fa-envelope-o {
     -o-background-size: cover;
     background-size: cover;
     }
+	.text-content{
+		padding: 0px 20px;
+		line-height: 24px;
+		font-size: 16px !important;
+	}
 }
 
 .navbar-nav a span{
