@@ -15,38 +15,42 @@ $(function () {
     /**
      * 监听开场视频
      */
-    var video = document.getElementById('video');
-    var hasLoaded = false;
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'static/video.mp4', true);
-    xhr.responseType = 'arraybuffer';
-    xhr.timeout = '6000';
-    xhr.send();
-    xhr.onload = function() {
-        if (xhr.status !== 200) {
-            return;
-        }
-        // 转换成文件格式
-        var binaryData = new Uint8Array(xhr.response);
-        // 生成一个本地的url
-        var rUrl = window.URL.createObjectURL(new Blob([binaryData], {
-            type: "video/mp4"
-        }));
-        // video赋值
-        video.src = rUrl;
-        // 加载成功标识
-        hasLoaded = true;
-        setTimeout(function () {
-           $('.start-mask').fadeOut();
-        },7000);
-    };
-    xhr.onerror = function () {
-        console.log("video request was wrong");
-    };
-    video.addEventListener('click',function (e) {
-        video.pause();
-        $('.start-mask').fadeOut();
-    });
+    if(isMobile){
+        $('.start-mask').remove();
+    }else{
+        var video = document.getElementById('video');
+        var hasLoaded = false;
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'static/video.mp4', true);
+        xhr.responseType = 'arraybuffer';
+        xhr.timeout = '6000';
+        xhr.send();
+        xhr.onload = function() {
+            if (xhr.status !== 200) {
+                return;
+            }
+            // 转换成文件格式
+            var binaryData = new Uint8Array(xhr.response);
+            // 生成一个本地的url
+            var rUrl = window.URL.createObjectURL(new Blob([binaryData], {
+                type: "video/mp4"
+            }));
+            // video赋值
+            video.src = rUrl;
+            // 加载成功标识
+            hasLoaded = true;
+            setTimeout(function () {
+                $('.start-mask').fadeOut();
+            },7000);
+        };
+        xhr.onerror = function () {
+            console.log("video request was wrong");
+        };
+        video.addEventListener('click',function (e) {
+            video.pause();
+            $('.start-mask').fadeOut();
+        });
+    }
 
     /**
      * 导航模块
@@ -117,7 +121,30 @@ $(function () {
             },
         },
     });
-    /*swiper.slideTo(1);*/
+
+    var startScroll, touchStart, touchCurrent;
+    swiper.slides.on('touchstart', function (e) {
+        startScroll = this.scrollTop;  //当前获取滚动条顶部的偏移
+        touchStart = e.targetTouches[0].pageY; //手指触碰位置距离盒子顶部距离
+    }, true);
+    swiper.slides.on('touchmove', function (e) {
+        touchCurrent = e.targetTouches[0].pageY;
+        var touchesDiff = touchCurrent - touchStart;
+        var slide = this;
+        var onlyScrolling =
+            ( slide.scrollHeight > slide.offsetHeight ) &&
+            (
+                ( touchesDiff < 0 && startScroll === 0 ) ||
+                ( touchesDiff > 0 && startScroll === ( slide.scrollHeight - slide.offsetHeight ) ) ||
+                ( startScroll > 0 && startScroll < ( slide.scrollHeight - slide.offsetHeight ) )
+            );
+        if (onlyScrolling) {
+            e.stopPropagation();
+        }
+    }, true);
+
+    /*    swiper.slideTo(3);*/
+
 
     /**
      *
