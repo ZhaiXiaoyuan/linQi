@@ -8,36 +8,41 @@
     <meta name="keywords" content="麟奇科技"/>
     <link rel="shortcut icon" href="./favicon.png">
     <link rel="stylesheet" href="lib/swiper-4.4.2/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="lib/animate.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body id="home">
 <div class="header scale">
     <i class="icon logo-icon"></i>
+    <span class="menu-btn">
+        <i class="icon menu-icon" onclick="menuToggle(event)"></i>
+        <i class="icon close-icon" onclick="menuToggle(event)"></i>
+    </span>
     <ul class="nav-list">
-        <li class="active" onclick="goToPage(0)"><a><p>首页</p><p>HOME</p></a></li>
-        <li onclick="goToPage(1)"><a><p>服务</p><p>SERVICE</p></a></li>
-        <li onclick="goToPage(2)"><a><p>关于</p><p>ABOUT</p></a></li>
-        <li onclick="goToPage(3)"><a><p>联系</p><p>CONTACT</p></a></li>
+        <li class="active" onclick="goToPage(0);menuToggle(event)"><a><p>首页</p><p>HOME</p></a></li>
+        <li onclick="goToPage(1);menuToggle(event)"><a><p>服务</p><p>SERVICE</p></a></li>
+        <li onclick="goToPage(2);menuToggle(event)"><a><p>关于</p><p>ABOUT</p></a></li>
+        <li onclick="goToPage(3);menuToggle(event)"><a><p>联系</p><p>CONTACT</p></a></li>
     </ul>
 </div>
 <div class="start-mask">
-    <video id="video" autoplay>
+    <video id="video" autoplay muted>
         <source src="" type="video/mp4">
         您的浏览器不支持 video 标签。
     </video>
 </div>
-<div class="swiper-container">
+<div class="swiper-container page-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide page page-1">
             <div class="icon-block">
-                <p><i class="icon page-1-name-icon"></i></p>
-                <p><i class="icon page-1-slogan-icon"></i></p>
-                <p><i class="icon page-1-desc-icon"></i></p>
+                <p><i class="icon page-1-name-icon animation-item" animation="slideInLeft"></i></p>
+                <p><i class="icon page-1-slogan-icon animation-item" animation="slideInLeft" style="animation-delay:.5s;-webkit-animation-delay:.5s;transition-delay: 0.5s;-webkit-transition-delay: 0.5s; "></i></p>
+                <p><i class="icon page-1-desc-icon animation-item"  animation="bounceIn"  style="animation-delay:1.2s;-webkit-animation-delay:1.2s;transition-delay: 1.2s;-webkit-transition-delay: 1.2s; "></i></p>
             </div>
         </div>
         <div class="swiper-slide page page-2">
             <div class="page-content">
-                <div class="tab-panel">
+                <div class="tab-panel" id="h-scroll">
                     <ul class="tab-list">
                         <li class="active" target="content1"><span>产品设计</span></li>
                         <li target="content2"><span>技术解决方案咨询</span></li>
@@ -47,169 +52,179 @@
                         <li target="content6"><span>工业&结构设计</span></li>
                     </ul>
                 </div>
-                <div class="content-panel">
-                    <div class="tab-content content1 active">
-                        <p class="title">极客范，技术派，实力派</p>
-                        <p class="item">1.行业产品解决方案调研与评估。</p>
-                        <p class="item">2.全方位针对性量身定制设计，产品&项目可行性技术解决方案。</p>
-                        <p class="item">3.根据技术沉淀与积累，诊断预测产品&项目潜在风险因素，并给出风险应对策略。</p>
-                        <p class="item">4.产品&项目建议开发费用、周期、研发团队人员配置，保障项目顺利落地。</p>
-                        <p class="item">5.业内优秀资源、供应链推荐与对接。</p>
-                        <p class="item">6.第三方技术顾问，项目监理服务。</p>
-                    </div>
-                    <div class="tab-content content2">
-                        <p class="title">倾尽我所能，力助您所想</p>
-                        <p class="item">1.我们将有专业资深的产品经理全程一对一服务。</p>
-                        <p class="item">2.竞品调研、市场分析咨询服务，编写输出专业的BRD文档。</p>
-                        <p class="item">3.根据产品设计、项目经验，根据实际需求、给出合适且具有可行性的商业模式，业务逻辑建议。</p>
-                        <p class="item">4.细化梳理产品功能需求，通过Xmind 输出 思维导图、编写专业的PRD文档。</p>
-                        <p class="item">5.产品业务逻辑可视化，通过AXURE等专业工具，根据PRD文档输出专业高保真原型设计，进一步明确产品业务逻辑。</p>
-                        <p class="item">6.运营与推广策略咨询服务。</p>
-                    </div>
-                    <div class="tab-content content3">
-                        <p class="title">大而全，专而精</p>
-                        <ul class="icon-list">
-                            <li>
-                                <img src="img/home/web-icon.png" alt="">
-                                <p>网站定制开发</p>
-                            </li>
-                            <li>
-                                <img src="img/home/weixin-icon.png" alt="">
-                                <p>微信公众号开发/运维</p>
-                            </li>
-                            <li>
-                                <img src="img/home/game-icon.png" alt="">
-                                <p>小程序&小游戏</p>
-                            </li>
-                            <li>
-                                <img src="img/home/app-icon.png" alt="">
-                                <p>APP开发</p>
-                            </li>
-                            <li>
-                                <img src="img/home/saas-icon.png" alt="">
-                                <p>企业级SAAS系统</p>
-                            </li>
-                            <li>
-                                <img src="img/home/pc-icon.png" alt="">
-                                <p>PC软件开发</p>
-                            </li>
-                            <li>
-                                <img src="img/home/data-icon.png" alt="">
-                                <p>数据采集&分析</p>
-                            </li>
-                            <li>
-                                <img src="img/home/feature-icon.png" alt="">
-                                <p>特征工程</p>
-                            </li>
-                            <li>
-                                <img src="img/home/app-icon.png" alt="">
-                                <p>机器学习</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-content content4">
-                        <p class="title">大而全，专而精</p>
-                        <ul class="icon-list">
-                            <li>
-                                <img src="img/home/principle-icon.png" alt="">
-                                <p>原理图设计</p>
-                            </li>
-                            <li>
-                                <img src="img/home/pcb-icon.png" alt="">
-                                <p>PCB设计</p>
-                            </li>
-                            <li>
-                                <img src="img/home/proofing-icon.png" alt="">
-                                <p>PCB打样/生产</p>
-                            </li>
-                            <li>
-                                <img src="img/home/mcu-icon.png" alt="">
-                                <p>MCU开发</p>
-                            </li>
-                            <li>
-                                <img src="img/home/embedded-icon.png" alt="">
-                                <p>嵌入式开发</p>
-                            </li>
-                            <li>
-                                <img src="img/home/fpga-icon.png" alt="">
-                                <p>FPGA</p>
-                            </li>
-                            <li>
-                                <img src="img/home/smart-icon.png" alt="">
-                                <p>智能硬件</p>
-                            </li>
-                            <li>
-                                <img src="img/home/control-icon.png" alt="">
-                                <p>工业控制</p>
-                            </li>
-                            <li>
-                                <img src="img/home/iot-icon.png" alt="">
-                                <p>物联网</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-content content5">
-                        <p class="title">大而全，专而精</p>
-                        <ul class="icon-list">
-                            <li>
-                                <img src="img/home/design-icon.png" alt="">
-                                <p>平面设计</p>
-                            </li>
-                            <li>
-                                <img src="img/home/app-ui-icon.png" alt="">
-                                <p>APP UI</p>
-                            </li>
-                            <li>
-                                <img src="img/home/pc-design-icon.png" alt="">
-                                <p>网站设计</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-content content6">
-                        <p class="title">大而全，专而精</p>
-                        <ul class="icon-list">
-                            <li>
-                                <img src="img/home/appearance-icon.png" alt="">
-                                <p>外观设计</p>
-                            </li>
-                            <li>
-                                <img src="img/home/structure-icon.png" alt="">
-                                <p>结构设计</p>
-                            </li>
-                            <li>
-                                <img src="img/home/model-icon.png" alt="">
-                                <p>模型手板</p>
-                            </li>
-                            <li>
-                                <img src="img/home/cmf-icon.png" alt="">
-                                <p>CMF</p>
-                            </li>
-                            <li>
-                                <img src="img/home/produce-icon.png" alt="">
-                                <p>模具设计&生产</p>
-                            </li>
-                            <li>
-                                <img src="img/home/chain-icon.png" alt="">
-                                <p>供应链对接</p>
-                            </li>
-                        </ul>
+                <div class="swiper-container content-panel service-container">
+                    <div class="swiper-wrapper">
+                        <div class="tab-content content1 active swiper-slide">
+                            <p class="title">倾尽我所能，力助您所想</p>
+                            <p class="item">1.我们将有专业资深的产品经理全程一对一服务。</p>
+                            <p class="item">2.竞品调研、市场分析咨询服务，编写输出专业的BRD文档。</p>
+                            <p class="item">3.根据产品设计、项目经验，根据实际需求、给出合适且具有可行性的商业模式，业务逻辑建议。</p>
+                            <p class="item">4.细化梳理产品功能需求，通过Xmind 输出 思维导图、编写专业的PRD文档。</p>
+                            <p class="item">5.产品业务逻辑可视化，通过AXURE等专业工具，根据PRD文档输出专业高保真原型设计，进一步明确产品业务逻辑。</p>
+                            <p class="item">6.运营与推广策略咨询服务。</p>
+                        </div>
+                        <div class="tab-content content2 active swiper-slide">
+                            <p class="title">极客范，技术派，实力派</p>
+                            <p class="item">1.行业产品解决方案调研与评估。</p>
+                            <p class="item">2.全方位针对性量身定制设计，产品&项目可行性技术解决方案。</p>
+                            <p class="item">3.根据技术沉淀与积累，诊断预测产品&项目潜在风险因素，并给出风险应对策略。</p>
+                            <p class="item">4.产品&项目建议开发费用、周期、研发团队人员配置，保障项目顺利落地。</p>
+                            <p class="item">5.业内优秀资源、供应链推荐与对接。</p>
+                            <p class="item">6.第三方技术顾问，项目监理服务。</p>
+                        </div>
+                        <div class="tab-content content3 active swiper-slide">
+                            <p class="title">大而全，专而精</p>
+                            <ul class="icon-list">
+                                <li>
+                                    <img src="img/home/web-icon.png" alt="">
+                                    <p>网站定制开发</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/weixin-icon.png" alt="">
+                                    <p>微信公众号开发/运维</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/game-icon.png" alt="">
+                                    <p>小程序&小游戏</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/app-icon.png" alt="">
+                                    <p>APP开发</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/saas-icon.png" alt="">
+                                    <p>企业级SAAS系统</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/pc-icon.png" alt="">
+                                    <p>PC软件开发</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/data-icon.png" alt="">
+                                    <p>数据采集&分析</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/feature-icon.png" alt="">
+                                    <p>特征工程</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/ai-icon.png" alt="">
+                                    <p>机器学习</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content content4 active swiper-slide">
+                            <p class="title">大而全，专而精</p>
+                            <ul class="icon-list">
+                                <li>
+                                    <img src="img/home/principle-icon.png" alt="">
+                                    <p>原理图设计</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/pcb-icon.png" alt="">
+                                    <p>PCB设计</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/proofing-icon.png" alt="">
+                                    <p>PCB打样/生产</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/mcu-icon.png" alt="">
+                                    <p>MCU开发</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/embedded-icon.png" alt="">
+                                    <p>嵌入式开发</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/fpga-icon.png" alt="">
+                                    <p>FPGA</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/smart-icon.png" alt="">
+                                    <p>智能硬件</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/control-icon.png" alt="">
+                                    <p>工业控制</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/iot-icon.png" alt="">
+                                    <p>物联网</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content content5 active swiper-slide">
+                            <p class="title">大而全，专而精</p>
+                            <ul class="icon-list">
+                                <li>
+                                    <img src="img/home/design-icon.png" alt="">
+                                    <p>平面设计</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/app-ui-icon.png" alt="">
+                                    <p>APP UI</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/pc-design-icon.png" alt="">
+                                    <p>网站设计</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content content6 active swiper-slide">
+                            <p class="title">大而全，专而精</p>
+                            <ul class="icon-list">
+                                <li>
+                                    <img src="img/home/appearance-icon.png" alt="">
+                                    <p>外观设计</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/structure-icon.png" alt="">
+                                    <p>结构设计</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/model-icon.png" alt="">
+                                    <p>模型手板</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/cmf-icon.png" alt="">
+                                    <p>CMF</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/produce-icon.png" alt="">
+                                    <p>模具设计&生产</p>
+                                </li>
+                                <li>
+                                    <img src="img/home/chain-icon.png" alt="">
+                                    <p>供应链对接</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <i class="icon logo-lg-icon"></i>
         </div>
         <div class="swiper-slide page page-3">
-            <div class="page-content">
-                <p>麟奇科技以“倾尽我所能，力助您所想”为指导思想。</p>
-                <p>以技术研发为核心驱动。</p>
-                <p>持续创新，开放合作。</p>
-                <p>为企业级SAAS，互联网，智能硬件，工业控制，医疗等多个行业的客户提供了</p>
-                <p>各种高定制化，高可用性，高可靠性的软硬件全方位整体技术解决方案。</p>
+            <div class="page-content pc-content">
+                <p  class="animation-item"  animation="fadeInUp">麟奇科技以“倾尽我所能，力助您所想”为指导思想。</p>
+                <p  class="animation-item"  animation="fadeInUp"  style="animation-delay:.3s;-webkit-animation-delay:.3s;transition-delay: 0.3s;-webkit-transition-delay: 0.3s; ">以技术研发为核心驱动。</p>
+                <p  class="animation-item"  animation="fadeInUp"  style="animation-delay:0.6s;-webkit-animation-delay:0.6s;transition-delay: 0.6s;-webkit-transition-delay: 0.6s; ">持续创新，开放合作。</p>
+                <p  class="animation-item"  animation="fadeInUp"  style="animation-delay:0.9s;-webkit-animation-delay:0.9s;transition-delay: 0.9s;-webkit-transition-delay: 0.9s; ">为企业级SAAS，互联网，智能硬件，工业控制，医疗等多个行业的客户提供了</p>
+                <p  class="animation-item"  animation="fadeInUp"  style="animation-delay:1.2s;-webkit-animation-delay:1.2s;transition-delay: 1.2s;-webkit-transition-delay: 1.2s; ">各种高定制化，高可用性，高可靠性的软硬件全方位整体技术解决方案。</p>
+            </div>
+            <div class="page-content m-content">
+                <p class="animation-item"  animation="fadeIn">
+                    麟奇科技以“倾尽我所能，力助您所想”为指导思想，以技术研发为核心驱动，持续创新，开放合作。
+                </p>
+                <p  class="animation-item"  animation="fadeIn"  style="animation-delay:.5s;-webkit-animation-delay:.5s;transition-delay: 0.5s;-webkit-transition-delay: 0.5s; ">
+                    为企业级SAAS，互联网，智能硬件，工业控制，医疗等多个行业的客户提供了各种高定制化，高可用性，高可靠性的软硬件全方位整体技术解决方案。
+                </p>
             </div>
         </div>
         <div class="swiper-slide page page-4">
             <div class="page-content">
-                <div class="form">
+                <div class="form animation-item"  animation="fadeIn">
                     <p class="title">联系我们</p>
                     <div class="row">
                         <div class="cm-checkbox selected" value="资讯">
@@ -276,11 +291,11 @@
                 </div>
                 <div class="contact">
                     <ul class="item-list">
-                        <li><i class="icon phone-icon"></i><span>+86 18566293262</span></li>
-                        <li><i class="icon email-icon"></i><span>bp@linqi.tech</span></li>
-                        <li><i class="icon phone-icon"></i><span>广东省广州市荔湾区花地大道南187号广佛数字创意园三期</span></li>
+                        <li class="animation-item"  animation="slideInUp"><i class="icon phone-icon"></i><span>+86 18566293262</span></li>
+                        <li class="animation-item"  animation="slideInUp" style="animation-delay:.2s;-webkit-animation-delay:.2s;transition-delay: 0.2s;-webkit-transition-delay: 0.2s; "><i class="icon email-icon"></i><span>bp@linqi.tech</span></li>
+                        <li class="animation-item"  animation="slideInUp" style="animation-delay:.4s;-webkit-animation-delay:.4s;transition-delay: 0.4s;-webkit-transition-delay: 0.4s; "><i class="icon site-icon"></i><span>广东省广州市荔湾区花地大道南187号广佛数字创意园三期</span></li>
                     </ul>
-                    <img class="qrcode" src="img/home/qrcode.png" alt="">
+                    <img class="qrcode animation-item" animation="fadeIn" style="animation-delay:.6s;-webkit-animation-delay:.6s;transition-delay: 0.6s;-webkit-transition-delay: 0.6s; " src="img/home/qrcode.png" alt="">
                 </div>
             </div>
         </div>
@@ -288,7 +303,7 @@
     <!--  <div class="swiper-pagination"></div>-->
 </div>
 <div class="footer">
-    <p>© 2018 麟奇科技(广州)有限责任公司 版权所有 粤ICP备18113279号-1</p>
+    <p>©2018麟奇科技(广州)有限责任公司版权所有粤ICP备18113279号-1</p>
 </div>
 </body>
 <script>

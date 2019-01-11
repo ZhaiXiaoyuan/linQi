@@ -181,8 +181,12 @@ body{
     padding: 2px 30px;
     .logo-icon{
       background: url("../img/common/logo-icon.png") no-repeat;
-      width: 118px;
-      height: 90px;
+      width: 75px;
+      height: 57px;
+      background-size: 100% 100%;
+    }
+    .menu-btn{
+      display: none;
     }
     .nav-list{
       height: 100%;
@@ -194,13 +198,12 @@ body{
         a{
           p{
             color: rgba(255,255,255,0.3);
-            font-size: 22px;
-            font-family: '宋体';
+            font-size: 16px;
             &+p{
-              margin-top: 2px;
+              margin-top: 0px;
               font-size: 12px;
               font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
-              transform: scale(0.88);
+              transform: scale(0.7);
             }
           }
         }
@@ -241,16 +244,16 @@ body{
     }
     .page-1-name-icon{
       background: url("../img/home/page1-name-icon.png") no-repeat;
-      width: 193px;
-      height: 47px;
+      width: 123px;
+      height: 29px;
       background-size: 100% 100%;
     }
     .page-1-slogan-icon{
-      margin-top: 25px;
+      margin-top: 20px;
       position: relative;
       background: url("../img/home/page1-slogan-icon.png") no-repeat;
-      width: 697px;
-      height: 68px;
+      width: 445px;
+      height: 43px;
       background-size: 100% 100%;
       &:after{
         position: absolute;
@@ -263,10 +266,10 @@ body{
       }
     }
     .page-1-desc-icon{
-      margin-top: 20px;
+      margin-top: 15px;
       background: url("../img/home/page1-desc-icon.png") no-repeat;
-      width: 602px;
-      height: 39px;
+      width: 385px;
+      height: 25px;
       background-size: 100% 100%;
     }
   }
@@ -308,7 +311,7 @@ body{
               width: 100%;
               height: 100%;
               background: url("../img/home/selected-icon.png") no-repeat center;
-              opacity: 0.6;
+              opacity: 0.8;
             }
           }
         }
@@ -330,18 +333,17 @@ body{
       background: url("../img/home/panel-top-line.png") no-repeat;
       background-position: top center;
       background-size: 90% 3px;
-      font-family: '宋体';
       color: #fff;
       .tab-content{
         display: none;
         padding: 5% 8%;
         .title{
-          font-size: 36px;
+          font-size: 28px;
           padding-bottom: 30px;
         }
         .item{
-          font-size: 18px;
-          line-height: 60px;
+          font-size: 15px;
+          line-height: 52px;
         }
         .icon-list{
           padding: 0px 5%;
@@ -351,11 +353,11 @@ body{
             width: 18%;
             text-align: center;
             img{
-
+              width: 80px;
             }
             p{
-              padding-top: 15px;
-              font-size: 18px;
+              padding-top: 12px;
+              font-size: 12px;
               color: rgba(255,255,255,0.8);
             }
           }
@@ -391,13 +393,20 @@ body{
     background-size: auto 100%;
     .page-content{
       padding: 10% 5%;
-      font-size: 30px;
+      font-size: 20px;
       color: rgba(255,255,255,0.4);
       line-height: 60px;
-      font-family: '宋体';
+    }
+    .pc-content{
+
+    }
+    .m-content{
+      display: none;
     }
   }
   .page-4{
+    background: url("../img/home/page4-bg.jpg") no-repeat center;
+    background-size: cover;
     .page-content{
       display: flex;
       justify-content: center;
@@ -410,18 +419,17 @@ body{
       width: 768px;
       height: 616px;
       background-size: 100% 100%;
-      font-family: '宋体';
-      padding: 3% 5%;
+      padding: 4% 5% 0% 5%;
       text-align: left;
       .title{
-        font-size: 30px;
+        font-size: 22px;
         color: rgba(255,255,255,0.4);
         margin-bottom: 30px;
       }
       .row{
         display: flex;
         &.row{
-          margin-top: 25px;
+          margin-top: 30px;
         }
       }
       .cm-checkbox{
@@ -431,13 +439,13 @@ body{
           display: flex;
           align-items: center;
           .status{
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
             border: 1px solid rgba(255,255,255,0.4);
             margin-right: 10px;
           }
           span{
-            font-size: 16px;
+            font-size: 14px;
             color: rgba(255,255,255,0.4);
             font-weight: bold;
           }
@@ -540,29 +548,29 @@ body{
 
           }
           span{
-            padding-left: 20px;
-            font-size: 20px;
+            padding-left: 12px;
+            font-size: 14px;
             color: #fff;
           }
           .phone-icon{
             display: inline-block;
             background: url("../img/home/phone-icon.png") no-repeat;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             background-size: 100% 100%;
           }
           .email-icon{
             display: inline-block;
             background: url("../img/home/email-icon.png") no-repeat;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             background-size: 100% 100%;
           }
           .site-icon{
             display: inline-block;
             background: url("../img/home/site-icon.png") no-repeat;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             background-size: 100% 100%;
           }
           &+li{
@@ -572,7 +580,7 @@ body{
       }
       .qrcode{
         margin-top: 50px;
-        width: 300px;
+        width: 200px;
       }
     }
   }
@@ -591,20 +599,21 @@ body{
     }
   }
 }
+
+.animation-item{
+  /*visibility: hidden;*/
+  opacity: 0;
+  /*transition: opacity 0.3s;*/
+}
+.animated{
+  opacity: 1;
+}
 @media screen and (max-width: 1366px){
   #home{
     .header{
       padding: 2px 30px;
       .nav-list{
         li{
-          a{
-            p{
-              font-size: 18px;
-              &+p{
-                transform: scale(0.80);
-              }
-            }
-          }
           &+li{
             margin-left: 40px;
           }
@@ -612,19 +621,7 @@ body{
       }
     }
     .page-1{
-      .page-1-name-icon{
-        width: 154px;
-        height: 37px;
-      }
-      .page-1-slogan-icon{
-        margin-top: 20px;
-        width: 557px;
-        height: 54px;
-      }
-      .page-1-desc-icon{
-        width: 481px;
-        height: 31px;
-      }
+
     }
     .page-2{
       .tab-panel{
@@ -645,26 +642,13 @@ body{
         .tab-content{
           padding: 5% 8%;
           .title{
-            font-size: 30px;
             padding-bottom: 25px;
           }
           .item{
-            font-size: 16px;
             line-height: 55px;
-            font-family: -apple-system, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
           }
           .icon-list{
             padding: 0px 5%;
-            li{
-              img{
-                width: 100px;
-              }
-              p{
-                padding-top: 12px;
-                font-size: 16px;
-                font-family: -apple-system, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-              }
-            }
           }
         }
         .content3,.content4,.content5,.content6{
@@ -682,10 +666,7 @@ body{
       }
     }
     .page-3{
-      .page-content{
-        font-size: 24px;
-        line-height: 50px;
-      }
+
     }
     .page-4{
       .page-content{
@@ -697,9 +678,9 @@ body{
       .form{
         width: 614px;
         height: 492px;
-        padding: 3% 4%;
+        padding: 2.8% 4% 0% 4%;
         .title{
-          font-size: 24px;
+          font-size: 22px;
           color: rgba(255,255,255,0.4);
           margin-bottom: 20px;
         }
@@ -755,22 +736,6 @@ body{
       .contact{
         .item-list{
           li{
-            span{
-              padding-left: 15px;
-              font-size: 16px;
-            }
-            .phone-icon{
-              width: 30px;
-              height: 30px;
-            }
-            .email-icon{
-              width: 30px;
-              height: 30px;
-            }
-            .site-icon{
-              width: 30px;
-              height: 30px;
-            }
             &+li{
               margin-top: 20px;
             }
@@ -778,7 +743,7 @@ body{
         }
         .qrcode{
           margin-top: 40px;
-          width: 250px;
+          width: 180px;
         }
       }
     }
@@ -799,6 +764,14 @@ body{
         padding-top: 5.5%;
       }
     }
+    .page-4{
+      .page-content{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 5% 5% 0% 5%;
+      }
+    }
   }
 }
 @media screen and (max-width: 1000px){
@@ -812,28 +785,79 @@ body{
     }
     .header{
       padding: 0.16rem 0.3rem;
-      background: rgba(0,0,0,0.2);
       .logo-icon{
+        width: 1.18rem;
+        height: 0.9rem;
+        background: url("../img/common/m-logo-icon.png") no-repeat;
         width: 1.18rem;
         height: 0.9rem;
         background-size: 100% 100%;
       }
+      .menu-btn{
+        position: absolute;
+        top:0.5rem;
+        right: 0rem;
+        display: inline-block;
+        width: 1.6rem;
+        text-align: center;
+        .menu-icon{
+          display: inline-block;
+          background: url("../img/home/menu-icon.png") no-repeat;
+          width: 0.5rem;
+          height: 0.38rem;
+          background-size: 100% 100%;
+        }
+        .close-icon{
+          display: none;
+          background: url("../img/home/close-icon.png") no-repeat;
+          width: 0.38rem;
+          height: 0.38rem;
+          background-size: 100% 100%;
+        }
+      }
       .nav-list{
-        padding-right: 0rem;
+        display: inline-block !important;
+        height: auto;
+        position: fixed;
+        top:1.2rem;
+        right: -1.6rem;
+        transition: right 0.3s;
+        background: rgba(0,0,0,0.5);
+        padding: 0.6rem 0rem;
         li{
+          display: block;
+          min-width: 1.6rem;
           a{
             display: block;
             p{
-              font-size: 0.32rem;
+              font-size: 0.28rem;
+              font-weight: bold;
+              color: rgba(255,255,255,0.5);
               &+p{
+                font-weight: normal;
                 margin-top: 0rem;
                 font-size: 0.24rem;
+                transform: scale(0.7);
               }
             }
           }
           &+li{
-            margin-left: 0.4rem;
+            margin-left: auto;
+            margin-top: 0.8rem;
           }
+        }
+      }
+      &.active{
+        .menu-btn{
+          .menu-icon{
+            display: none;
+          }
+          .close-icon{
+            display: inline-block;
+          }
+        }
+        .nav-list{
+          right: 0rem;
         }
       }
     }
@@ -841,44 +865,71 @@ body{
       padding: 1.2rem 0rem 0.88rem;
     }
     .page-1{
-      background-attachment:fixed;
-      background-position:60%  50%;
+      display: block;
+      background: url("../img/home/m-page1-bg.jpg") no-repeat;
+      background-size: cover;
+      .icon-block{
+        display: flex;
+        padding: 0.8rem 0rem 0rem 0.7rem;
+        margin: 0rem;
+      }
       .page-1-name-icon{
-        width: 1.93rem;
-        height: 0.47rem;
+        background: url("../img/home/m-page1-name-icon.png") no-repeat;
+        width: 0.38rem;
+        height: 1.62rem;
+        background-size: 100% 100%;
       }
       .page-1-slogan-icon{
-        margin-top: 0.3rem;
-        width: 6.27rem;
-        height: 0.61rem;
+        background: url("../img/home/m-page-1-slogan-icon.png") no-repeat;
+        width: 0.48rem;
+        height: 5.08rem;
+        background-size: 100% 100%;
+        margin: 0rem 0rem 0rem 0.3rem;
         &:after{
-          bottom: -0.2rem;
+          position: absolute;
+          content: '';
+          left: auto;
+          top:0rem;
+          right: -0.3rem;
+          width: 1px;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.7);
         }
       }
       .page-1-desc-icon{
-        margin-top: 0.3rem;
-        width: 5.41rem;
-        height: 0.35rem;
+        background: url("../img/home/m-page-1-desc-icon.png") no-repeat;
+        width: 0.29rem;
+        height: 4.7rem;
+        background-size: 100% 100%;
+        margin: 0rem 0rem 0rem 0.6rem;
       }
     }
     .page-2{
+      background: url("../img/home/m-page2-bg.jpg") no-repeat center;
+      background-size: cover;
       .page-content{
         padding-top: 0rem;
         display: block;
       }
       .tab-panel{
+        margin-top: 0.4rem;
+        position: relative;
         width: 100%;
-        padding: 2% 0px 0px 0px;
+        padding: 0rem;
+        overflow-x: auto;
+        background: url("../img/home/m-tab-bg.png") no-repeat center;
+        background-size: 95% 100%;
         .tab-list{
           padding: 0.2rem 0.2rem;
+          white-space:nowrap;
           li{
             display: inline-block;
-            padding: 0.16rem 0.1rem;
-            font-size: 0.28rem;
+            padding: 0.16rem 0.2rem;
+            font-size: 0.24rem;
             font-weight: bold;
             &.active{
               &:before{
-                background-size: 100% 100%;
+                background-size: 100% 80%;
               }
             }
           }
@@ -888,18 +939,20 @@ body{
         }
       }
       .content-panel{
+        background: none;
         width: 100%;
-        background-size: 90% 2px;
+        opacity: 0;
         .tab-content{
           display: none;
-          padding: 0.6rem 0.4rem 0rem 0.4rem;
+          padding: 0.4rem 0.4rem 0rem 0.4rem;
           .title{
-            font-size: 0.48rem;
-            padding-bottom: 0.3rem;
+            font-size: 0.4rem;
+            padding-bottom: 0.4rem;
+            text-align: center;
           }
           .item{
-            font-size: 0.3rem;
-            line-height: 0.5rem;
+            font-size: 0.28rem;
+            line-height: 0.54rem;
             &+.item{
               margin-top: 0.16rem;
             }
@@ -909,15 +962,16 @@ body{
             flex-wrap: wrap;
             padding: 0px 0%;
             li{
-              padding: 2% 0%;
+              padding: 0.24rem 0rem;
               width: 2.4rem;
               text-align: center;
               img{
-                width: 1rem;
+                width: 1.2rem;
               }
               p{
                 padding-top: 0.1rem;
                 font-size: 0.24rem;
+                transform: scale(0.9);
               }
             }
           }
@@ -930,8 +984,12 @@ body{
             padding-right: 8%;
           }
         }
+        &.active{
+          opacity: 1;
+        }
       }
       .logo-lg-icon{
+        display: none;
         right: 0.4rem;
         bottom: 1rem;
         width: 3.68rem;
@@ -939,22 +997,35 @@ body{
       }
     }
     .page-3{
+      background: url("../img/home/m-page3-bg.jpg") no-repeat center;
+      background-size: cover;
       .page-content{
-        padding: 1rem 0.4rem;
-        font-size: 0.4rem;
-        line-height: 0.8rem;
+        padding: 1rem 0.3rem;
+        font-size: 0.3rem;
+        line-height: 0.56rem;
+        p+p{
+          margin-top: 0.5rem;
+        }
+      }
+      .pc-content{
+        display: none;
+      }
+      .m-content{
+        display: block;
       }
     }
     .page-4{
       overflow: auto;
       -webkit-overflow-scrolling : touch;
+      background: url("../img/home/m-page4-bg.jpg") no-repeat;
+      background-size: cover;
       .page-content{
         display: block;
-        padding: 0.4rem 0.3rem;
+        padding: 0.4rem 0.6rem;
         overflow: hidden;
       }
       .form{
-        display: inline-block;
+        display: none;
         background: url("../img/home/contact-form-bg.png") no-repeat;
         width: 100%;
         height: auto;
@@ -1068,31 +1139,31 @@ body{
         text-align: left;
         overflow: hidden;
         .item-list{
-          float: left;
-          width: 60%;
+          float: none;
+          width: 100%;
           li{
             display: flex;
             align-items: center;
             .icon{
-              width: 0.6rem !important;
-              height: 0.6rem !important;
+              width: 0.5rem !important;
+              height: 0.5rem !important;
             }
             span{
               display: inline-block;
-              width: 3.2rem;
+              width: 5.8rem;
               padding-left: 0.2rem;
               font-size: 0.24rem;
               color: #fff;
             }
             &+li{
-              margin-top: 0.2rem;
+              margin-top: 0.3rem;
             }
           }
         }
         .qrcode{
           float: left;
-          margin-top: 0rem;
-          width: 40%;
+          margin-top: 0.5rem;
+          width: 3.4rem
         }
       }
     }
@@ -1100,7 +1171,7 @@ body{
       width: 100%;
       padding: 0.3rem 0rem;
       font-size: 12px;
-      background: #13181D;
+      background: none;
       p{
         transform: scale(0.88);
       }
