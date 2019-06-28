@@ -251,5 +251,56 @@
             }
             return isMobile;
         },
+        cnLang:{
+            'contact-title':'联系我们',
+            'contact-consult':'咨询',
+            'contact-media':'媒体',
+            'contact-cooperation':'合作',
+            'contact-name':'姓名',
+            'contact-position':'职位',
+            'contact-company':'公司',
+            'contact-region':'地区',
+            'contact-phone':'手机',
+            'contact-email':'邮箱',
+            'contact-remark':'描述',
+            'contact-submit':'提交',
+
+            'name-holder':'请输入您的姓名',
+            'position-holder':'请输入您的职位',
+            'company-holder':'请输入您的公司',
+            'region-holder':'请输入地区',
+            'phone-holder':'请输入您的手机',
+            'email-holder':'请输入您的邮箱',
+            'remark-holder':'请输入描述',
+
+            'submit-handling':'提交中',
+            'submit-success':'提价成功',
+
+        },
+        enLang:{
+            'contact-title':'Contact',
+            'contact-consult':'consult',
+            'contact-media':'media',
+            'contact-cooperation':'cooperation',
+            'contact-name':'name',
+            'contact-position':'position',
+            'contact-company':'company',
+            'contact-region':'region',
+            'contact-phone':'phone',
+            'contact-email':'email',
+            'contact-remark':'remark',
+            'contact-submit':'submit',
+
+            'name-holder':'please enter your name',
+            'position-holder':'please please enter your name your position',
+            'company-holder':'please enter your company',
+            'region-holder':'please enter the region you from',
+            'phone-holder':'please enter your phone',
+            'email-holder':'please enter your email',
+            'remark-holder':'please enter the remark',
+
+            'submit-handling':'submitting',
+            'submit-success':'submitted successfully',
+        }
     }
 })();

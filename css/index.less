@@ -190,7 +190,7 @@ body{
     }
     .nav-list{
       height: 100%;
-      margin-left: auto;
+      margin-left: 100px;
       padding-right: 20px;
       li{
         display: inline-block;
@@ -216,6 +216,40 @@ body{
         }
         &+li{
           margin-left: 50px;
+        }
+      }
+    }
+    .lang-switch{
+      margin-left: auto;
+      color: #fff;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .en-text{
+        position: relative;
+        top:1px;
+      }
+      .icon{
+        margin: 0px 8px;
+      }
+      &.cn{
+        .icon{
+          display: inline-block;
+          background: url("../img/common/switch-left.png") no-repeat;
+          width: 32px;
+          height: 32px;
+          background-size: 100% 100%;
+        }
+      }
+      &.en{
+        .icon{
+          display: inline-block;
+          background: url("../img/common/switch-right.png") no-repeat;
+          width: 32px;
+          height: 32px;
+          background-size: 100% 100%;
         }
       }
     }
@@ -347,10 +381,13 @@ body{
         }
         .icon-list{
           padding: 0px 5%;
+          display: flex;
+          flex-wrap: wrap;
           li{
             display: inline-block;
-            padding: 2% 0%;
+            padding: 2% 5px;
             width: 18%;
+            flex-shrink: 0;
             text-align: center;
             img{
               width: 80px;
@@ -486,6 +523,7 @@ body{
           font-weight: bold;
           min-width: 30px;
           margin-right: 10px;
+          width: 60px;
         }
         input{
           width: 220px;
@@ -595,10 +633,49 @@ body{
     color: rgba(255,255,255,0.2);
     text-align: center;
     p{
-      transform: scale(0.88);
+     /* transform: scale(0.88);*/
+      letter-spacing: 1px;
+    }
+  }
+  &.en-page{
+    .page-1{
+      .icon-block{
+        margin-left: 5%;
+      }
+      .en-page-1-name-icon{
+        background: url("../img/home/en-page1-name-icon.png") no-repeat;
+        width: 171px;
+        height: 31px;
+        background-size: 100% 100%;
+      }
+      .en-page-1-slogan-icon{
+        margin-top: 25px;
+        position: relative;
+        background: url("../img/home/en-page1-slogan-icon.png") no-repeat;
+        width: 984px;
+        height: 40px;
+        background-size: 100% 100%;
+        &:after{
+          position: absolute;
+          content: '';
+          left: 0px;
+          bottom: -15px;
+          width: 100%;
+          height: 2px;
+          background: rgba(255,255,255,0.7);
+        }
+      }
+      .en-page-1-desc-icon{
+        margin-top: 23px;
+        background: url("../img/home/en-page1-desc-icon.png") no-repeat;
+        width: 849px;
+        height: 22px;
+        background-size: 100% 100%;
+      }
     }
   }
 }
+
 
 .animation-item{
   /*visibility: hidden;*/
@@ -747,6 +824,25 @@ body{
         }
       }
     }
+    &.en-page{
+      .page-1{
+        .icon-block{
+          margin-left: 5%;
+        }
+      /*  .en-page-1-name-icon{
+          width: 195px;
+          height: 37px;
+        }
+        .en-page-1-slogan-icon{
+          width: 1124px;
+          height: 45px;
+        }
+        .en-page-1-desc-icon{
+          width: 970px;
+          height: 25px;
+        }*/
+      }
+    }
   }
 }
 @media screen and (min-width: 2000px){
@@ -846,6 +942,9 @@ body{
             margin-top: 0.8rem;
           }
         }
+      }
+      .lang-switch{
+        margin-right: 60px;
       }
       &.active{
         .menu-btn{
@@ -1099,6 +1198,7 @@ body{
             font-weight: bold;
             min-width: 30px;
             margin-right: 10px;
+            width: 60px;
           }
           input{
             width: 2.2rem;
@@ -1174,6 +1274,44 @@ body{
       background: none;
       p{
         transform: scale(0.88);
+      }
+    }
+
+    &.en-page{
+      .page-1{
+        .icon-block{
+          display: block;
+          margin-left: 3%;
+          padding: 3rem 0rem 0rem 0rem !important;
+        }
+        .en-page-1-name-icon{
+          width: 1.22rem;
+          height: 0.24rem;
+        }
+        .en-page-1-slogan-icon{
+          width: 7.02rem;
+          height: 0.28rem;
+        }
+        .en-page-1-desc-icon{
+          width: 6.06rem;
+          height: 0.2rem;
+        }
+      }
+      .page-2{
+        .content-panel{
+          .tab-content{
+            padding-top: 0rem;
+            .title{
+              padding-bottom: 0.3rem;
+            }
+            .item{
+              line-height: 0.48rem;
+              &+.item{
+                margin-top: 0.04rem;
+              }
+            }
+          }
+        }
       }
     }
   }

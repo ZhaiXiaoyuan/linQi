@@ -6,6 +6,57 @@ $(function () {
      *
      */
     var isMobile=utils.deviceType();
+    var pRequest=utils.getRequest();
+    console.log('pRequest:',pRequest);
+
+    /**
+     *
+     */
+    var lang=pRequest.lang;
+    var langData={};
+    function setContent(data) {
+        langData=data;
+    }
+    window.setLang=function(type) {
+        var $switch=$('#lang-switch');
+        if(!type){
+            if($switch.hasClass('cn')){
+                $switch.removeClass('cn');
+                $switch.addClass('en');
+                link('en');
+            }else if($switch.hasClass('en')){
+                $switch.removeClass('en');
+                $switch.addClass('cn');
+                link('cn');
+            }
+        }else{
+            $switch.removeClass('cn en');
+            $switch.addClass(type);
+            if(type=='en'){
+              langData=utils.enLang;
+            }else if(type=='cn'){
+                langData=utils.cnLang;
+            }
+        }
+    }
+    function link(type) {
+        if(type=='en'){
+            window.location.href='en-index.html?lang=en';
+        }else if(type=='cn'){
+            window.location.href='index.html?lang=cn';
+        }
+    }
+    if(lang){
+        setLang(lang);
+    }else{
+        if(returnCitySN&&returnCitySN.cid&&returnCitySN.cname){
+            setLang('cn');
+        }else{
+            link('en');
+        }
+    }
+
+   /* console.log('returnCitySN:',returnCitySN);*/
 
     /**
      * 图片懒加载
@@ -149,7 +200,7 @@ $(function () {
     /**
      * 监听开场视频
      */
-    if(isMobile){
+    if(isMobile||lang){
         $('.start-mask').remove();
         inintSwiper();
     }else{
@@ -270,31 +321,31 @@ $(function () {
         var remark=$('textarea[name=remark]').val();
 
         if(!name){
-            utils.operationFeedback({type:'warn',text:'请输入您的姓名'});
+            utils.operationFeedback({type:'warn',text:langData['name-holder']});
             return
         }
         if(!position){
-            utils.operationFeedback({type:'warn',text:'请输入您的职位'});
+            utils.operationFeedback({type:'warn',text:langData['position-holder']});
             return
         }
         if(!company){
-            utils.operationFeedback({type:'warn',text:'请输入您的公司'});
+            utils.operationFeedback({type:'warn',text:langData['company-holder']});
             return
         }
         if(!region){
-            utils.operationFeedback({type:'warn',text:'请输入地区'});
+            utils.operationFeedback({type:'warn',text:langData['region-holder']});
             return
         }
         if(!phone){
-            utils.operationFeedback({type:'warn',text:'请输入您的手机'});
+            utils.operationFeedback({type:'warn',text:langData['phone-holder']});
             return
         }
         if(!email){
-            utils.operationFeedback({type:'warn',text:'请输入您的邮箱'});
+            utils.operationFeedback({type:'warn',text:langData['email-holder']});
             return
         }
         if(!remark){
-            utils.operationFeedback({type:'warn',text:'请输入描述'});
+            utils.operationFeedback({type:'warn',text:langData['remark-holder']});
             return
         }
         var params={
@@ -307,44 +358,13 @@ $(function () {
             company:company,
             address:region,
         }
-        var fb=utils.operationFeedback({text:'提交中...'});
+        var fb=utils.operationFeedback({text:langData['submit-handling']});
         httpApi.saveContact(params).then(function (data) {
             if(data.code==200){
-                fb.setOptions({type:'complete',text:'提交成功'});
+                fb.setOptions({type:'complete',text:langData['submit-success']});
             }else{
                 fb.setOptions({type:'warn',text:data.error});
             }
         })
     }
-
-    /**
-     * 临时测试
-     */
-    function websocketTest(id) {
-        console.log('___________'+id+'____________');
-        // 初始化一个 WebSocket 对象
-        var ws = new WebSocket("ws://zyu-server.wicp.net:55788/123");
-
-// 建立 web socket 连接成功触发事件
-        ws.onopen = function (evt) {
-            // 使用 send() 方法发送数据
-            ws.send("发送数据");
-            console.log("数据发送中**",id,'**:',evt);
-        };
-
-// 接收服务端数据时触发事件
-        ws.onmessage = function (evt) {
-            var received_msg = evt.data;
-            console.log("数据已接收**",id,'**:'+received_msg);
-        };
-
-// 断开 web socket 连接成功触发事件
-        ws.onclose = function (evt) {
-            console.log("连接已关闭**",id,'**:',evt);
-        };
-    }
-/*
-    for(var i=0;i<3;i++){
-        websocketTest(i)
-    }*/
 })

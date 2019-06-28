@@ -249,7 +249,7 @@ body {
 }
 #home .header .nav-list {
   height: 100%;
-  margin-left: auto;
+  margin-left: 100px;
   padding-right: 20px;
 }
 #home .header .nav-list li {
@@ -272,6 +272,42 @@ body {
 }
 #home .header .nav-list li + li {
   margin-left: 50px;
+}
+#home .header .lang-switch {
+  margin-left: auto;
+  color: #fff;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+#home .header .lang-switch .en-text {
+  position: relative;
+  top: 1px;
+}
+#home .header .lang-switch .icon {
+  margin: 0px 8px;
+}
+#home .header .lang-switch.cn .icon {
+  display: inline-block;
+  background: url("../img/common/switch-left.png") no-repeat;
+  width: 32px;
+  height: 32px;
+  background-size: 100% 100%;
+}
+#home .header .lang-switch.en .icon {
+  display: inline-block;
+  background: url("../img/common/switch-right.png") no-repeat;
+  width: 32px;
+  height: 32px;
+  background-size: 100% 100%;
 }
 #home .swiper-container {
   width: 100%;
@@ -409,11 +445,18 @@ body {
 }
 #home .page-2 .content-panel .tab-content .icon-list {
   padding: 0px 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 #home .page-2 .content-panel .tab-content .icon-list li {
   display: inline-block;
-  padding: 2% 0%;
+  padding: 2% 5px;
   width: 18%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   text-align: center;
 }
 #home .page-2 .content-panel .tab-content .icon-list li img {
@@ -559,6 +602,7 @@ body {
   font-weight: bold;
   min-width: 30px;
   margin-right: 10px;
+  width: 60px;
 }
 #home .page-4 .form .input-item input {
   width: 220px;
@@ -669,8 +713,41 @@ body {
   text-align: center;
 }
 #home .footer p {
-  -webkit-transform: scale(0.88);
-          transform: scale(0.88);
+  /* transform: scale(0.88);*/
+  letter-spacing: 1px;
+}
+#home.en-page .page-1 .icon-block {
+  margin-left: 5%;
+}
+#home.en-page .page-1 .en-page-1-name-icon {
+  background: url("../img/home/en-page1-name-icon.png") no-repeat;
+  width: 171px;
+  height: 31px;
+  background-size: 100% 100%;
+}
+#home.en-page .page-1 .en-page-1-slogan-icon {
+  margin-top: 25px;
+  position: relative;
+  background: url("../img/home/en-page1-slogan-icon.png") no-repeat;
+  width: 984px;
+  height: 40px;
+  background-size: 100% 100%;
+}
+#home.en-page .page-1 .en-page-1-slogan-icon:after {
+  position: absolute;
+  content: '';
+  left: 0px;
+  bottom: -15px;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.7);
+}
+#home.en-page .page-1 .en-page-1-desc-icon {
+  margin-top: 23px;
+  background: url("../img/home/en-page1-desc-icon.png") no-repeat;
+  width: 849px;
+  height: 22px;
+  background-size: 100% 100%;
 }
 .animation-item {
   /*visibility: hidden;*/
@@ -798,6 +875,23 @@ body {
     margin-top: 40px;
     width: 180px;
   }
+  #home.en-page .page-1 {
+    /*  .en-page-1-name-icon{
+          width: 195px;
+          height: 37px;
+        }
+        .en-page-1-slogan-icon{
+          width: 1124px;
+          height: 45px;
+        }
+        .en-page-1-desc-icon{
+          width: 970px;
+          height: 25px;
+        }*/
+  }
+  #home.en-page .page-1 .icon-block {
+    margin-left: 5%;
+  }
 }
 @media screen and (min-width: 2000px) {
   #home .page-2 .tab-panel .tab-list {
@@ -893,6 +987,9 @@ body {
   #home .header .nav-list li + li {
     margin-left: auto;
     margin-top: 0.8rem;
+  }
+  #home .header .lang-switch {
+    margin-right: 60px;
   }
   #home .header.active .menu-btn .menu-icon {
     display: none;
@@ -1160,6 +1257,7 @@ body {
     font-weight: bold;
     min-width: 30px;
     margin-right: 10px;
+    width: 60px;
   }
   #home .page-4 .form .input-item input {
     width: 2.2rem;
@@ -1240,5 +1338,34 @@ body {
   #home .footer p {
     -webkit-transform: scale(0.88);
             transform: scale(0.88);
+  }
+  #home.en-page .page-1 .icon-block {
+    display: block;
+    margin-left: 3%;
+    padding: 3rem 0rem 0rem 0rem !important;
+  }
+  #home.en-page .page-1 .en-page-1-name-icon {
+    width: 1.22rem;
+    height: 0.24rem;
+  }
+  #home.en-page .page-1 .en-page-1-slogan-icon {
+    width: 7.02rem;
+    height: 0.28rem;
+  }
+  #home.en-page .page-1 .en-page-1-desc-icon {
+    width: 6.06rem;
+    height: 0.2rem;
+  }
+  #home.en-page .page-2 .content-panel .tab-content {
+    padding-top: 0rem;
+  }
+  #home.en-page .page-2 .content-panel .tab-content .title {
+    padding-bottom: 0.3rem;
+  }
+  #home.en-page .page-2 .content-panel .tab-content .item {
+    line-height: 0.48rem;
+  }
+  #home.en-page .page-2 .content-panel .tab-content .item + .item {
+    margin-top: 0.04rem;
   }
 }
