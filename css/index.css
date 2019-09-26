@@ -331,7 +331,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background: url("../img/home/page1-bg.jpg") no-repeat center;
-  background-size: auto 100%;
+  background-size: cover;
 }
 #home .page-1 .icon-block {
   margin-left: 8%;
@@ -369,7 +369,7 @@ body {
 #home .page-2 {
   position: relative;
   background: url("../img/home/page2-bg.jpg") no-repeat center;
-  background-size: auto 100%;
+  background-size: cover;
 }
 #home .page-2 .page-content {
   padding-top: 7%;
@@ -496,7 +496,7 @@ body {
 #home .page-3 {
   position: relative;
   background: url("../img/home/page3-bg.jpg") no-repeat center;
-  background-size: auto 100%;
+  background-size: cover;
 }
 #home .page-3 .page-content {
   padding: 10% 5%;
