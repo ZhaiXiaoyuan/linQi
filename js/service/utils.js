@@ -274,7 +274,7 @@
             'remark-holder':'请输入描述',
 
             'submit-handling':'提交中',
-            'submit-success':'提价成功',
+            'submit-success':'提交成功',
 
         },
         enLang:{
