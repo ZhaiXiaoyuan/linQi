@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a3ec4aa2-738b-40d2-8231-dc7f59fd33e7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/service/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/service/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/en-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/en-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/controller/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/controller/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,25 +25,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Y0l1YSKIbj4pKVE6SJJrSlCW1h" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img/home" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\linQiProject\img\home" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\linQiProject\img\home" />
       <recent name="D:\workspace\linQiProject\css" />
       <recent name="D:\workspace\linQiProject\js\controller" />
       <recent name="D:\workspace\linQiProject" />
       <recent name="D:\workspace\linQiProject\img\common" />
-      <recent name="D:\workspace\linQiProject\img\home" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\linQiProject\img\home" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -100,6 +107,12 @@
       <workItem from="1582087179285" duration="760000" />
       <workItem from="1585126957603" duration="1989000" />
       <workItem from="1586322430190" duration="791000" />
+      <workItem from="1591021727171" duration="2996000" />
+      <workItem from="1591070336708" duration="19000" />
+      <workItem from="1592559879931" duration="649000" />
+      <workItem from="1592935030882" duration="2330000" />
+      <workItem from="1593235399219" duration="112000" />
+      <workItem from="1599310907941" duration="2569000" />
     </task>
     <servers />
   </component>
